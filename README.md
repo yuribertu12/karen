@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O quanto eu te amo, Karen ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #4d0039;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #b30059;
+            animation: fadeInDown 2s ease;
+        }
+        p {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 1.1em;
+            color: #006600;
+            animation: fadeIn 3s ease;
+        }
+        .heart {
+            color: red;
+            animation: pulse 1.5s infinite;
+            font-size: 2em;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .highlight {
+            color: #ff3399;
+            font-weight: bold;
+        }
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .hearts span {
+            position: absolute;
+            display: block;
+            color: red;
+            animation: float 8s linear infinite;
+            font-size: 2em;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts">
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+    </div>
+
+    <h1>O quanto eu te amo, Karen ❤️</h1>
+
+    <p>Eu poderia tentar colocar em palavras, mas a verdade é que nenhum texto conseguiria descrever tudo o que eu sinto por você.</p>
+
+    <p>É no seu sorriso que eu encontro <span class="highlight">paz</span>, é no seu olhar que eu vejo <span class="highlight">futuro</span>, e é com você que eu quero viver cada momento, do mais simples ao mais especial.</p>
+
+    <p>Eu te amo por quem você é, por cada detalhe seu, pelas suas manias, pelas suas risadas espontâneas e até pelos momentos em que você fica brava (o que só te deixa ainda mais linda 😂).</p>
+
+    <p>Você faz meus dias mais leves, meu coração mais feliz e minha vida mais bonita. Obrigado por existir e por me permitir te amar desse jeito tão grande.</p>
+
+    <p>Mal posso esperar por todos os momentos incríveis que ainda vamos viver juntos. 💫</p>
+
+    <p>Quero estar ao seu lado nos seus melhores dias e também te abraçar nos dias difíceis. Quero ser o seu porto seguro e o motivo de muitos dos seus sorrisos. 😊</p>
+
+    <p><span class="heart">❤️</span> Com todo o meu amor, Gustavo.</p>
+
+    <div class="footer">🌸 Criado por Yuri 🌸</div>
+
+    <script>
+        // Gerar corações caindo
+        const heartsContainer = document.querySelector('.hearts');
+        setInterval(() => {
+            const heart = document.createElement('span');
+            heart.innerText = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            heartsContainer.appendChild(heart);
+            setTimeout(() => heart.remove(), 8000);
+        }, 500);
+    </script>
+
+</body>
+</html>
